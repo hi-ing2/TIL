@@ -51,7 +51,7 @@ $ rm -rf venv/ # 작업 완료 후 삭제를 원할시 사용한다.
 
 ```
 
-- 유용한 툴 : jupyter notebook, (pip)pandas, (pip) requests
+- 유용한 툴 : jupyter notebook, (pip) pandas, (pip) requests
 
 ### 3. pip 가상 환경에 대한 requirements.txt 생성
 
@@ -74,12 +74,16 @@ $ pip freeze > requirments.txt # freeze에 있는 설치 명령 정보들을 req
 
 (venv)
 mhs34@DESKTOP-47QE027 MINGW64 ~/TIL/python (master)
-$ cat requirments.txt # 해당 txt파일 안에 입력을 잘 되어 있는지 보여준다.
+$ cat requirments.txt # 해당 txt파일 안에 입력이 잘 되어 있는지 보여준다.
 certifi==2019.11.28
 chardet==3.0.4
 idna==2.8
 requests==2.22.0
 urllib3==1.25.7
+
+(venv)
+mhs34@DESKTOP-47QE027 MINGW64 ~/TIL/python (master)
+$pip install -r requriements.txt #txet상태로 노출하여 모듈과 버전과 그대로 인스톨 하기 위함
 
 (venv)
 mhs34@DESKTOP-47QE027 MINGW64 ~/TIL/python (master)
