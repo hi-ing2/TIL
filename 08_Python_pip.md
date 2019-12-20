@@ -90,5 +90,26 @@ mhs34@DESKTOP-47QE027 MINGW64 ~/TIL/python (master)
 $ rm -rf requirements.txt # 필요 시 삭제한다.
 ```
 
+#### - 팁 : .gitignore 파일 사용하여 일부 파일만 push하기
 
+>  http://gitignore.io/ 에서 push에서 제외시키기 원하는 키워드를 입력한 뒤 출력해주는 해당 text를 전부 복사한다. .git이 있는 최상위 폴더에 .gitignore 파일 안에 생성한 뒤,  해당 text를 전부 붙여 넣는다. 마지막으로 push를 한다.
+
+```shell
+mhs34@DESKTOP-47QE027 MINGW64 ~
+$ cd TIL/ #제외 push를 하고싶은 최상위 폴더(.git이 있는 폴더)로 이동한다.
+
+mhs34@DESKTOP-47QE027 MINGW64 ~/TIL (master)
+$ touch .gitignore #.gitignore 숨김파일 생성
+
+mhs34@DESKTOP-47QE027 MINGW64 ~/TIL (master)
+$ ls -a # 생성 확인
+./          00_markdown_basic.md  04_master_git.md       08_Python_pip.md
+../         01_cli.md             05_branch.md           README.md
+.git/       02_Github_TIL.md      06_branch_vs_fork.md   python/
+.gitignore  03_push_pull.md       07_프로그래밍_언어.md
+
+mhs34@DESKTOP-47QE027 MINGW64 ~/TIL (master)
+$ vi .gitignore # 필요한 부분 즉석으로도 수정 가능하다.
+
+```
 
