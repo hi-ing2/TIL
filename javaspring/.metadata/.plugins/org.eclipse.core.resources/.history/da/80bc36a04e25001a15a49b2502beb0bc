@@ -1,0 +1,18 @@
+package com.hi.basic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller //내부 정보값을 다 불러와서 보여줄 필요없음 (로그인만 하면되기 때문)
+public class LoginController {
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+	@GetMapping("/login")
+	public String loginPost( //전송할 대상을 등록
+			@RequestParam("id") String id,
+			@RequestParam("pw") String pw {
+		return "login";
+	}
+}

@@ -1,0 +1,16 @@
+package com.hi.basic.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RequestController {
+	@GetMapping("req/http")
+	public String http(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String pageNum = request.getParameter("pageNum");
+		return name + ", " + pageNum;
+	}
+}
