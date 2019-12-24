@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller //내부 정보값을 다 불러와서 보여줄 필요없음 (로그인만 하면되기 때문)
+//@Controller //내부 정보값을 다 불러와서 보여줄 필요없음 (로그인만 하면되기 때문)
 public class LoginController {
 	@GetMapping("/login")
 	public String login() {

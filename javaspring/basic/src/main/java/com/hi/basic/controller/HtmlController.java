@@ -12,16 +12,16 @@ import com.hi.basic.model.Member;
 @Controller
 public class HtmlController {
 	@GetMapping("html/string")
-	public String html() {
+	public String html() { //string 방식을 반환
 		return "html/string";
 	}
 
 	@GetMapping("html/void")
-	public void htmlVoid() {
-	}
+	public void htmlVoid() { //void 방식을 반환
+		}
 
 	@GetMapping("html/map")
-	public Map<String, Object> htmlMap(Map<String, Object> map) {
+	public Map<String, Object> htmlMap(Map<String, Object> map) { //Map 방식을 반환
 		Map<String, Object> map2 = new HashMap<String, Object>();
 		return map2;
 	}

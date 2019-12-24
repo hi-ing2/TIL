@@ -52,9 +52,23 @@ public class ThymeleafController {
 		model.addAttribute("category", map.get("category"));
 		return "mode";
 	}
-
+	@GetMapping("/linkUrl")
+	public String linkUrl(
+//			@RequestParam int start, 
+//			@RequestParam int end, 
+			@RequestParam int now_page, 
+			Model model) {
+		int start = (now_page - 1) / 10 * 10 + 1;
+		int end = start + 9;
+		model.addAttribute("start" , start);
+		model.addAttribute("end" , end);
+		model.addAttribute("now_page", now_page);
+		return "linkUrl";
+		
+	}
+	
 	@GetMapping("pagination")
-	public String pagination(Model model, @RequestParam(defaultValue = "1") int page) {
+	public String pagination(Model model, @RequestParam(defaultValue = "1") int page) { //defualtvalue는 기본값설정
 		int startPage = (page - 1) / 10 * 10 + 1;
 		int endPage = startPage + 9;
 		model.addAttribute("startPage", startPage);

@@ -1,0 +1,6 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:each = "page : ${#numbers.sequence (start, end)}">
+	<span th:if="${now_page == page}" th:text="${page}"></span>
+	<a href = "#" th:unless = "${now_page == page}" >[[${page}]]</a>  <!-- [[]] 과 th: 는 같은 용도이다 -->
+</th:block>
+</html>
