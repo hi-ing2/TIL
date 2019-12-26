@@ -1,0 +1,27 @@
+<input type="text" id="lang">
+<button>번역</button>
+<hr>
+
+<!-- 자바 스크립트(jQuery) AJAX 활용 -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- getKakao 주소를 호출 -->
+<!-- parsing 후 화면에 출력 -->
+
+<script>
+	$('button').click(function(){  //버튼을 클릭하면 해당 기능 발생
+		$.ajax({
+			url: '/getNaver',
+			type: 'get',
+			data : {'lang' : $('#lang').val()},
+			success : function(res){ //제이슨 경로 따라서 원하는 부분(번역본) 출력
+				var message = res.message;
+				var result = message.result;
+				var translatedText = result.translatedText;
+				var html = '<h1>' + translatedText + '</h1>';
+				$('hr').after(html);
+				//console.log(res)
+			}
+		})
+	})
+</script>
