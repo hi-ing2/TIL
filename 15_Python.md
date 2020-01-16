@@ -61,8 +61,29 @@ jupyter notebook --generate-config
 
 > config 파일 내에 c.NotebookApp.browser='주피터 크롬브라우저 위치' 로 변경 해주면 된다. 
 
+
+
 ## 함수
 
 ### def vs lamda
 
 > 코딩 도중 즉석으로 간단한 함수를 만들어야 될때, lambda를 자주 이용한다.
+
+
+
+## 예외처리
+
+## 내장함수
+
+### map vs filter
+
+> map은 적용! filter는 제거!
+
+## 외장함수
+
+## 정규식
+
+## 크롤링
+
+## DB
+
