@@ -85,5 +85,31 @@ jupyter notebook --generate-config
 
 ## 크롤링
 
+### Selenium
+
+- find_element
+
+  > 요소를 찾는 함수는 모두 상호작용이 가능하다.
+
+  ``` python
+  trs = driver.find_element_by_css_selector('#table01 > tbody > tr:nth-child(5))
+  obj = trs.find_element_by_class_name('some') #trs안에서 또 찾음
+  ```
+
+  
+
+  - find_element_by_css_selector
+
+    > 경로를 표시해줄 때, 바로 아래 자식은 '>' 표시 / 모든 자식들은 ' '(여백)으로 준다.
+
+    ``` python
+    driver.find_elements_by_css_selector('body > div.container > div > div > div.panelZone > div.oTravelBox > ul > li > div > div.title-row > div > h5') # 전자 경우
+    ```
+
+driver.find_elements_by_css_selector('#tab_con1 > .first tr') #후자 경우
+```
+
 ## DB
 
+
+```
