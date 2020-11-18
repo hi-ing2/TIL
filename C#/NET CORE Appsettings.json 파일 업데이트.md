@@ -49,7 +49,6 @@
             MessageBox.Show("Please select a directory 'VCS.exe' exists.");
             return false;
         }
-
     }
     // return 하기 위한 경로 최종 값
     public string EditResult(CommonOpenFileDialog dialog, string result_pathTextBoxText, string result_value,params string[] result_appKey )
